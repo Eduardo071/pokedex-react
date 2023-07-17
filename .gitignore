@@ -8,9 +8,6 @@
 # testing
 /coverage
 
-# production
-/build
-
 # misc
 .DS_Store
 .env.local
@@ -21,3 +18,22 @@
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+
+# arquivos de build
+build/
+dist/
+
+# dependências do gerenciador de pacotes
+/yarn.lock
+/package-lock.json
+
+# arquivos de ambiente
+.env
+
+# arquivos de log
+*.log
+
+# arquivos de cache
+.cache/
+.temp/
+.tmp/
