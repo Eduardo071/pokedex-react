@@ -24,7 +24,9 @@ export function CardPokemon({ quantityPokemons, searchTerm, selectedOption }) {
             setPokemon(pokemonDetails)
         }
         fetchPokedex()
+    }, [quantityPokemons, selectedOption])
 
+    useEffect(() => {
         const fetchPokemonDetails = async () => {
             let responses
             if (selectedOption === "") {
@@ -41,12 +43,9 @@ export function CardPokemon({ quantityPokemons, searchTerm, selectedOption }) {
 
         }
         fetchPokemonDetails()
-    }, [quantityPokemons, pokemon, selectedOption, searchTerm])
+    }, [pokemonDetails, selectedOption, pokemon, quantityPokemons])
 
     useEffect(() => {
-
-            
-
             const filteredPokemons = pokemonDetails.filter(pokemon => pokemon.name.toLowerCase().includes(searchTerm.toLowerCase()))
             searchTerm !== ''
             ? setFilteredPokemonsDetails(filteredPokemons)

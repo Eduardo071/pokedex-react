@@ -11,6 +11,7 @@ export function Select({handleSelectedOption, selectedOption}) {
             const fetchResponse = await fetch('https://pokeapi.co/api/v2/type')
             const data = await fetchResponse.json()
             const types = data.results
+            types.splice(18, 1)
             setTypes(types)
         }
         fetchType()
@@ -18,7 +19,7 @@ export function Select({handleSelectedOption, selectedOption}) {
 
     return (
         <PokemonTypeSelect value={selectedOption} onChange={handleSelectedOption} style={{ backgroundColor: theme.secondaryColor, color: theme.color }}>
-            <Option selected hidden>SORT BY:</Option>
+            <Option value='' disabled hidden>SORT BY:</Option>
             <Option value=''>All</Option>
             {
                 types ? types.map((type, index) => {
