@@ -15,20 +15,27 @@ function Home() {
     const { theme } = useContext(ThemeContext)
     
     const [quantityPokemons, setQuantityPokemons] = useState(10)
+    const [selectedOption, setSelectedOption] = useState('')
+    const [searchTerm, setSearchTerm ] = useState('')
 
     const handleClick = () => setQuantityPokemons(quantityPokemons + 10)
+
+    const handleSelectedOption = (event) => setSelectedOption(event.target.value)
+
+    const handleSearch = (event) => setSearchTerm(event.target.value)
+
 
     return (
         <Filter backgroundcolor={theme.backgroundColor}>
             <Title />
             <Section style={{ backgroundColor: theme.primaryColor }}>
                 <Header>
-                    <Select />
-                    <Input />
+                    <Select selectedOption={selectedOption} handleSelectedOption={handleSelectedOption} />
+                    <Input handleSearch={handleSearch} searchTerm={searchTerm} quantityPokemons={quantityPokemons} />
                     < Togglerbutton/>
                 </Header>
                 <PokemonsList>
-                <CardPokemon quantityPokemons={quantityPokemons} />
+                <CardPokemon searchTerm={searchTerm} selectedOption={selectedOption} quantityPokemons={quantityPokemons} />
                 </PokemonsList>
             </Section>
             <Button handleClick={handleClick} />

@@ -28,6 +28,10 @@ border-radius: 1rem;
 border-style: none;
 padding-left: 1rem;
 transition: 0.2s ease-in;
+
+&:hover{
+    cursor: pointer;
+}
 `
 
 export const Option = styled.option`
@@ -56,6 +60,10 @@ height: 6rem;
 border-radius: 50%;
 overflow: hidden;
 transition: 0.2s ease-in;
+
+&:hover{
+    cursor: pointer;
+}
 `
 
 export const Togglerimg = styled.img`
@@ -96,6 +104,10 @@ border-style: none;
 background-color: red;
 font-size: 3rem;
 transition: 0.2s ease-in;
+
+&:hover{
+    cursor: pointer;
+}
 `
 
 export const VectorImage = styled.svg`
@@ -133,14 +145,25 @@ width: 10rem;
 `
 
 export const NomePokemon = styled.h2`
+width: 17rem;
+text-align: center;
 font-size: 3rem;
 margin-top: 0.4rem;
 transition: 0.2s ease-in;
+text-overflow: ellipsis;
+overflow: hidden;
+white-space: nowrap;
 `
 
 export const LinkDescriptionPokemon = styled.div`
 display: flex;
 transition: 0.2s ease-in;
+
+&:hover{
+    cursor: pointer;
+    scale: 1.1;
+    opacity: 0.8;
+}
 `
 
 export const MoreText = styled.h2`

@@ -2,7 +2,7 @@ import { useContext, useEffect, useState } from "react"
 import { ThemeContext } from "../contexts/ThemeContext"
 import { Option, PokemonTypeSelect } from "./HomeStyle"
 
-export function Select() {
+export function Select({handleSelectedOption, selectedOption}) {
     const { theme } = useContext(ThemeContext)
     const [types, setTypes] = useState()
 
@@ -17,8 +17,9 @@ export function Select() {
     }, [])
 
     return (
-        <PokemonTypeSelect style={{ backgroundColor: theme.secondaryColor, color: theme.color }}>
-            <Option hidden>SORT BY:</Option>
+        <PokemonTypeSelect value={selectedOption} onChange={handleSelectedOption} style={{ backgroundColor: theme.secondaryColor, color: theme.color }}>
+            <Option selected hidden>SORT BY:</Option>
+            <Option value=''>All</Option>
             {
                 types ? types.map((type, index) => {
                     return (
