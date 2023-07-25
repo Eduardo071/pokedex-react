@@ -1,8 +1,9 @@
 import { useContext, useEffect, useState } from "react";
 import { Card, LinkDescriptionPokemon, MoreText, NomePokemon, PathImage, PokemonImg, PokemonMoldure, VectorImage } from "./HomeStyle";
-import { ThemeContext } from "../contexts/ThemeContext";
+import { ThemeContext } from "../../contexts/ThemeContext";
+import { Link } from "react-router-dom";
 
-export function CardPokemon({ quantityPokemons, searchTerm, selectedOption }) {
+export function CardPokemon({ quantityPokemons, searchTerm, selectedOption, handleSwitchPage }) {
     const { theme } = useContext(ThemeContext)
     const [pokemon, setPokemon] = useState([])
     const [pokemonDetails, setPokemonDetails] = useState([])
@@ -61,12 +62,14 @@ export function CardPokemon({ quantityPokemons, searchTerm, selectedOption }) {
                     <PokemonImg src={pokemon.sprites.versions["generation-v"]["black-white"].animated.front_default ? pokemon.sprites.versions["generation-v"]["black-white"].animated.front_default : pokemon.sprites.other["official-artwork"].front_default} alt={pokemon.name} />
                 </PokemonMoldure>
                 <NomePokemon style={{ color: theme.color }}>{pokemon.name}</NomePokemon>
-                <LinkDescriptionPokemon >
+                    <Link to={`/Pokemon/${pokemon.name}`}>
+                <LinkDescriptionPokemon>
                     <MoreText style={{ color: theme.color }}>MORE</MoreText>
                     <VectorImage width="20" height="20" viewBox="0 0 26 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <PathImage d="M2 2L13 15.5L23.5 2" stroke={theme.color} strokeWidth="5" />
                     </VectorImage>
                 </LinkDescriptionPokemon>
+                    </Link>
 
             </Card>
         ))

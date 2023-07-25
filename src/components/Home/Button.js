@@ -1,6 +1,6 @@
 import { useContext } from "react";
 import { ButtonShowMore, DivButtonShowMore, PathImage, VectorImage } from "./HomeStyle";
-import { ThemeContext } from "../contexts/ThemeContext";
+import { ThemeContext } from "../../contexts/ThemeContext";
 
 export function Button({handleClick}){
 

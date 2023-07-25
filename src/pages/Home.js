@@ -1,13 +1,13 @@
-import { Section, Filter, Header } from "../components/HomeStyle"
+import { Section, Filter, Header } from "../components/Home/HomeStyle"
 import { useContext, useState } from "react"
 import { ThemeContext } from "../contexts/ThemeContext"
-import { PokemonsList } from "../components/PokemonsList"
-import { Button } from "../components/Button"
-import { Title } from "../components/Title"
-import { Select } from "../components/Select"
-import { Input } from "../components/Input"
-import { Togglerbutton } from "../components/Toggler"
-import { CardPokemon } from "../components/CardPokemon"
+import { PokemonsList } from "../components/Home/PokemonsList"
+import { Button } from "../components/Home/Button"
+import { Title } from "../components/Home/Title"
+import { Select } from "../components/Home/Select"
+import { Input } from "../components/Home/Input"
+import { Togglerbutton } from "../components/Home/Toggler"
+import { CardPokemon } from "../components/Home/CardPokemon"
 
 
 function Home() {
@@ -17,6 +17,7 @@ function Home() {
     const [quantityPokemons, setQuantityPokemons] = useState(10)
     const [selectedOption, setSelectedOption] = useState('')
     const [searchTerm, setSearchTerm ] = useState('')
+
 
     const handleClick = () => setQuantityPokemons(quantityPokemons + 10)
 

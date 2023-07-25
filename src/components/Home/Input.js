@@ -1,6 +1,6 @@
 import { useContext } from "react";
 import { PokemonNameInput } from "./HomeStyle";
-import { ThemeContext } from "../contexts/ThemeContext";
+import { ThemeContext } from "../../contexts/ThemeContext";
 
 export function Input({ handleSearch, searchTerm }) {
     const { theme } = useContext(ThemeContext)

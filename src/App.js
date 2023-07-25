@@ -1,6 +1,6 @@
 import { ThemeProvider } from "./contexts/ThemeContext";
 import AppRoutes from "./pages/Routes";
-import { GlobalStyle } from "./components/GlobalStyle";
+import { GlobalStyle } from "./components/Home/GlobalStyle";
 
 
 function App() {

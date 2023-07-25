@@ -1,6 +1,6 @@
 import { useContext } from "react";
 import { Texto } from "./HomeStyle";
-import { ThemeContext } from "../contexts/ThemeContext";
+import { ThemeContext } from "../../contexts/ThemeContext";
 
 export function Title(){
     const {theme} = useContext(ThemeContext)

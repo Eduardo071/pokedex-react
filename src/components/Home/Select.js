@@ -1,5 +1,5 @@
 import { useContext, useEffect, useState } from "react"
-import { ThemeContext } from "../contexts/ThemeContext"
+import { ThemeContext } from "../../contexts/ThemeContext"
 import { Option, PokemonTypeSelect } from "./HomeStyle"
 
 export function Select({handleSelectedOption, selectedOption}) {

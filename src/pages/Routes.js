@@ -7,8 +7,8 @@ function AppRoutes() {
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<Navigate to="/home" />} />
-        <Route path="/home" element={<Home />} />
-        <Route path="/Pokemon/:name" element={<PokemonDetails />} />
+        <Route exact path="/home" element={<Home />} />
+        <Route exact path="/Pokemon/:name" element={<PokemonDetails />} />
       </Routes>
     </BrowserRouter>
   )
