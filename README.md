@@ -22,20 +22,9 @@
 
 ![Contributors](https://img.shields.io/github/contributors/Eduardo071/pokedex-react?color=dark-green) ![Forks](https://img.shields.io/github/forks/Eduardo071/pokedex-react?style=social) ![Stargazers](https://img.shields.io/github/stars/Eduardo071/pokedex-react?style=social) ![Issues](https://img.shields.io/github/issues/Eduardo071/pokedex-react) ![License](https://img.shields.io/github/license/Eduardo071/pokedex-react) 
 
-## Table Of Contents
-
-* [Sobre o projeto](#sobre-o-projeto)
-* [Desenvolvido com](#desenvolvido-com)
-* [Introdução](#introdução)
-  * [Pré requisitos](#pre-requisitos)
-  * [Instalação](#instalacao)
-* [Uso](#uso)
-* [Licença](#licenca)
-* [Autor](#autor)
-
 ## Sobre o projeto
 
-![Screen Shot](src/design/images/home-screenshot.png)
+[![Home Screenshot](src/design/images/home-screenshot.png)](https://pokedex-react-f229ylk4i-eduardo071.vercel.app)
 
 Esse projeto da pokedex com react possui duas páginas de navegação interna (SPA).
 
