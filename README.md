@@ -1,70 +1,107 @@
-# Getting Started with Create React App
+<br/>
+<p align="center">
+  <a href="https://github.com/Eduardo071/pokedex-react">
+    <img src="public/favicon.ico" alt="Logo" width="80" height="80">
+  </a>
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+  <h3 align="center">Pokedex with React.js</h3>
 
-## Available Scripts
+  <p align="center">
+    Pokedex desenvolvida com a tecnologia React.js
+    <br/>
+    <br/>
+<a href="https://www.figma.com/file/Mjkq59dMNWNuf6gsRujTgH/Pokedex_design?type=design&node-id=0%3A1&mode=design&t=7AahfgbjH8fxLtAg-1"><strong>Veja o protótipo »</strong></a>
+<br/>
+    <a href="https://github.com/Eduardo071/pokedex-react"><strong>Leia a documentação »</strong></a>
+    <br/>
+    <br/>
+    <a href="https://github.com/Eduardo071/pokedex-react/issues">Reporte um Bug</a>
+    .
+  </p>
+</p>
 
-In the project directory, you can run:
+![Contributors](https://img.shields.io/github/contributors/Eduardo071/pokedex-react?color=dark-green) ![Forks](https://img.shields.io/github/forks/Eduardo071/pokedex-react?style=social) ![Stargazers](https://img.shields.io/github/stars/Eduardo071/pokedex-react?style=social) ![Issues](https://img.shields.io/github/issues/Eduardo071/pokedex-react) ![License](https://img.shields.io/github/license/Eduardo071/pokedex-react) 
 
-### `npm start`
+## Table Of Contents
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+* [Sobre o projeto](#sobre-o-projeto)
+* [Desenvolvido com](#desenvolvido-com)
+* [Introdução](#introdução)
+  * [Pré requisitos](#pre-requisitos)
+  * [Instalação](#instalacao)
+* [Uso](#uso)
+* [Licença](#licenca)
+* [Autor](#autor)
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Sobre o projeto
 
-### `npm test`
+![Screen Shot](src/design/images/home-screenshot.png)
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Esse projeto da pokedex com react possui duas páginas de navegação interna (SPA).
 
-### `npm run build`
+Em ambas páginas temos um botão(Toggler) que troca o tema de Light para Dark e vice-versa, o que permite mais conforto ao gosto visual do usuário.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+A página inicial é a página Home, onde é listado 10 pokemons, e temos um botão para mostrar mais, que exibe mais 10 pokemons sempre que é clicado.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Temos um filtro de tipos de pokemon na Home, onde irá listar 10 pokemons do tipo selecionado, e sempre que clicar no botão irá mostrar mais 10 pokemons.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Também na Home, tem um campo de busca, que permite filtrar pelo nome do pokemon, é importante lembrar que esse filtro busca nos pokemons que estão renderizados na tela.
 
-### `npm run eject`
+Por fim, temos a página de descrição do pokemon, contendo o nome, imagem,tipo(s), descrição do pokemon, movimentos e habilidades do pokémon.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## Desenvolvido com
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Esse projeto foi desenvolvido utilizando:
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+* [Figma](https://www.figma.com)
+* [React.js](https://react.dev)
+* [React-Router](https://v5.reactrouter.com/)
+* [Styled-components](https://styled-components.com)
+* [Context-api](https://react.dev/learn/passing-data-deeply-with-context)
 
-## Learn More
+## Introdução
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+Para instalar esse projeto localmente em sua máquina, basta seguir o passo a passo.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+### Pré requisitos
 
-### Code Splitting
+Você irá precisar ter alguns pré-requisitos para instalar o projeto localmente, como:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+* npm
 
-### Analyzing the Bundle Size
+você irá precisar instalar o gerenciador de pacotes NPM.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+```sh
+npm install npm@latest -g
+```
 
-### Making a Progressive Web App
+### Instalação
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+1. Com o NPM instalado, faça o download do arquivo ZIP do projeto.
 
-### Advanced Configuration
+2. Extraia o arquivo .zip para algum local, através do terminal, navegue até a pasta, caso a pasta esteja na raiz do disco local C por exemplo, basta dar o seguinte comando:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+```sh
+cd /c/pokedex-react
+```
 
-### Deployment
+3. Agora basta instalar as dependências do projeto.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+```sh
+npm install
+```
 
-### `npm run build` fails to minify
+4. Pronto, projeto instalado com sucesso!!
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## Uso
+
+O objetivo do projeto em si, é para se divertir vendo as características dos pokemons, como habilidades, movimentos e até os tipos do pokemon.
+
+## Licença
+
+Distributed under the MIT License. See [LICENSE](https://github.com/Eduardo071/pokedex-react/blob/main/LICENSE.md) for more information.
+
+## Autor
+
+* **Eduardo071** - *Desenvolvedor Web Front-End* - [Eduardo071](https://github.com/Eduardo071) - *Protótipo e Código*
